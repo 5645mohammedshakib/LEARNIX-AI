@@ -257,8 +257,30 @@ function showPage(pageId, updateHash = true) {
   // Refresh page-specific content if needed
   if (pageId === "dashboard") {
     refreshDashboard();
+  } else if (pageId === "certificates") {
+    if (typeof initCertificates === "function") initCertificates();
+  } else if (pageId === "internships") {
+    if (typeof initInternships === "function") initInternships();
+  } else if (pageId === "learning") {
+    if (typeof initLearningHub === "function") initLearningHub();
+  } else if (pageId === "roadmaps") {
+    if (typeof initRoadmaps === "function") initRoadmaps();
+  } else if (pageId === "projects") {
+    if (typeof initProjects === "function") initProjects();
+  } else if (pageId === "aitools") {
+    if (typeof initAiTools === "function") initAiTools();
+  } else if (pageId === "hackathons") {
+    if (typeof initHackathons === "function") initHackathons();
+  } else if (pageId === "jobs") {
+    if (typeof initJobs === "function") initJobs();
+  } else if (pageId === "scholarships") {
+    if (typeof initScholarships === "function") initScholarships();
+  } else if (pageId === "interview") {
+    if (typeof initInterviewHub === "function") initInterviewHub();
+  } else if (pageId === "coding") {
+    if (typeof initCodingPractice === "function") initCodingPractice();
   } else if (pageId === "admin") {
-    renderAdminTables();
+    if (typeof renderAdminTables === "function") renderAdminTables();
   }
 }
 
