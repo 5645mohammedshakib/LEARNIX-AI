@@ -35,6 +35,12 @@
     <p class="loader-text">Loading Admin Portal...</p>
   </div>
 </div>
+<script>
+  setTimeout(function() {
+    var l = document.getElementById("loader");
+    if (l) l.classList.add("hidden");
+  }, 1000);
+</script>
 
 <!-- ===== ADMIN NAVBAR ===== -->
 <nav class="navbar" id="navbar">
